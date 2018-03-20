@@ -22,11 +22,17 @@ public class EjercicioMesas {
 		 * patas m2 color material 8 6 negro madera 2 5 verde madera 5 7 plateado acero
 		 * 3 5 amarillo alumnio 1 2 custom plastico
 		 */
-		Mesa izas = new Mesa(8, 6, "negro", 1);
-		Mesa mikel = new Mesa(2, 5, "verde", 1);
-		Mesa aingeru = new Mesa(5, 7, "plateado", 2);
-		Mesa joseba = new Mesa(3, 5, "amarillo", 3);
-		Mesa ander = new Mesa(1, 2, "custom", 4);
+		Mesa izas = new Mesa(8, 6, "negro", Mesa.MATERIAL_MADERA);
+		Mesa mikel = new Mesa(2, 5, "verde", Mesa.MATERIAL_MADERA);
+		Mesa aingeru = new Mesa(5, 7, "plateado", Mesa.MATERIAL_ACERO);
+		Mesa joseba = new Mesa(3, 5, "amarillo", Mesa.MATERIAL_ALUMINIO);
+		Mesa ander = new Mesa(1, 2, "custom", Mesa.MATERIAL_PLASTICO);
+		System.out.println(izas.escribirPrecio());
+		System.out.println(mikel.escribirPrecio());
+		System.out.println(aingeru.escribirPrecio());
+		System.out.println(joseba.escribirPrecio());
+		System.out.println(ander.escribirPrecio());
+
 	}
 
 }
