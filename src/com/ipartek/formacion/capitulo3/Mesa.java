@@ -45,10 +45,9 @@ public class Mesa {
 	 *            int en caso de ser negativo se inicializa con 0
 	 */
 
-	public Mesa(int numPatas) {
-		super();
-		// this.numPatas = numPatas;
-		this.setNumPatas(numPatas);
+	public Mesa(int material) {
+		this();
+		this.material = material;
 	}
 
 	public Mesa(int numPatas, int dimension, String color, int material) {
@@ -95,7 +94,7 @@ public class Mesa {
 	 *            int
 	 */
 	public void setNumPatas(int numPatas) {
-		this.numPatas = (numPatas < 0) ? 0 : numPatas;
+		this.numPatas = (numPatas <= 0) ? 1 : numPatas;
 	}
 
 	// 5.3 otros metodos
@@ -109,7 +108,7 @@ public class Mesa {
 		int precio = 0;
 		precio += this.getNumPatas() * PRECIO_PATA;
 		precio += this.getDimension() * PRECIO_M2;
-		if (this.getColor() == PRECIO_COLOR_NAME_CUSTOM) {
+		if (PRECIO_COLOR_NAME_CUSTOM.equals(this.getColor())) {
 			precio += PRECIO_COLOR_CUSTOM;
 		}
 		switch (this.getMaterial()) {

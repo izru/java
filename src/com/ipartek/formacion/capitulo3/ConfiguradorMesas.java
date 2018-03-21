@@ -8,7 +8,7 @@ public class ConfiguradorMesas {
 	static int material;
 	static int dimension;
 	static int precio;
-	static Material arrayMateriales[];
+	public static Material arrayMateriales[];
 	static int posArray;
 
 	public static void main(String[] args) {
@@ -71,6 +71,8 @@ public class ConfiguradorMesas {
 
 		System.out.println("¿Dimensiones (m2)?");
 		dimension = sc.nextInt();
+
+		sc.close();
 	}
 
 	/**
